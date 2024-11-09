@@ -1,10 +1,11 @@
 <template>
     <div class="nav">
-        <div class="logo"><router-link to="/">Workout</router-link></div>
+        <div class="logo"><router-link to="/">Belle Manicure</router-link></div>
         <ul class="nav-links" v-if="screenWidth > 1024">
             <li class="active"><router-link to="/">Home</router-link></li>
             <li><a href="">About</a></li>
-            <li><router-link to="/tarrifs">Price</router-link></li>
+            <li><a href="">Sources</a></li>
+            <li><router-link to="/tarrifs">Prices</router-link></li>
         </ul>
         <i v-else :class="menuIcon" @click="showMenu()"></i>
 

@@ -2,28 +2,29 @@
     <div class="head">
         <div class="promotion">
             <span>NEW</span>
-            Новая интенсивная тренировка
+            Бесплатное повышение квалификации
         </div>
         <div class="lead">
             <div>
-                <h1>Cardio<br>Exercise</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.</p>
+                <h1>Современный <br>Маникюр:<br> Повышаем Уровень</h1>
+                <p><b>Этот курс идеально подойдёт для : </b><br>
+                    - Мастеров маникюра, желающих обновить свои навыки и повысить квалификацию <br>
+                    - Начинающих специалистов, стремящихся быстро освоить новые техники <br>
+                    - Всех, кто хочет научиться создавать модные и стильные образы на ногтях</p>
                 <div class="lead-buttons">
-                    <button @click="NewWindow()">Начать</button>
+                    <button>Начать</button>
                     <button>Детальнее</button>
                 </div>
             </div>
             <div>
-                <img src="img/womanorg.png" alt="woman">
                 <div class="lead-info">
                     <div class="lead-info-time">
                         <span>{{ showTime }}</span>
-                        ВРЕМЯ
+                        ВРЕМЯ ДО СТАРТА
                     </div>
                     <div class="lead-info-cl">
-                        <span>165</span>
-                        КАЛОРИИ
+                        <span>12</span>
+                        ВИДЕО УРОКОВ
                     </div>
                 </div>
             </div>
@@ -64,21 +65,18 @@ export default {
             immediate: true
         }
     },
-    methods:{
-        NewWindow(){
-            window.location = './Cardio.html';
-        }
+    methods: {
+
     }
 }
 </script>
 
 <style lang="scss" scoped>
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,400;0,500;1,300&display=swap');
+
 .head {
     margin-top: 70px;
-    @media(min-width:1024px) {
-        height: 700px;
-        overflow: hidden;
-    }
+    margin-bottom: 33px;
 
 
     .promotion {
@@ -86,6 +84,10 @@ export default {
         border-radius: 200px;
         padding: 10px 5px;
         color: #D1D1D1;
+        text-align: center;
+        display: flex;
+        align-items: center;
+
 
         animation: pulse infinite ease-in-out 1.5s alternate;
 
@@ -99,11 +101,12 @@ export default {
         }
 
         span {
-            background: #25AB75;
+            background: rgb(245, 67, 97);
             border-radius: 200px;
             padding: 5px 10px;
             color: #fff;
-            margin-right: 10px;
+            margin-right: 4px;
+            margin-left: 7px;
             font-weight: 600;
             letter-spacing: 1.5px;
         }
@@ -112,34 +115,30 @@ export default {
     .lead {
         margin-top: 20px;
         display: flex;
-        position: relative;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
         h1 {
             letter-spacing: -2px;
 
             @media(min-width: 1500px) {
-                font-size: 12em;
-                line-height: 170px;
+                font-size: 6em;
+                line-height: 120px;
             }
 
-            @media(max-width: 1500px) and (min-width:1300px) {
-                font-size: 11em;
-                line-height: 160px;
-            }
-
-            @media(max-width: 1300px) and (min-width:650px) {
-                font-size: 8.5em;
-                line-height: 150px;
-            }
-
-            @media(max-width: 650px) and (min-width:450px) {
-                font-size: 5.5em;
-                line-height: 110px;
-            }
-
-            @media(max-width: 450px) {
-                font-size: 4em;
+            @media(max-width: 1500px) and (min-width:770px) {
+                font-size: 5em;
                 line-height: 90px;
+            }
+
+            @media(max-width: 770px) and (min-width:450px) {
+                font-size: 3.5em;
+                line-height: 70px;
+            }
+
+            @media(max-width: 460px) {
+                font-size: 2.7em;
+                line-height: 60px;
             }
 
         }
@@ -147,9 +146,15 @@ export default {
         p {
             color: #868686;
             margin: 25px 0;
+            font-weight: 500;
+            font-size: 1.2em;
 
-            @media(min-width: 650px){
+            @media(min-width: 650px) {
                 width: 600px;
+            }
+
+            b {
+                color: #d9d3d3;
             }
         }
 
@@ -165,6 +170,7 @@ export default {
             cursor: pointer;
             margin-top: 30px;
             transition: all .5s ease;
+
             &:first-of-type {
                 margin-right: 35px;
             }
@@ -179,33 +185,15 @@ export default {
         }
 
         >div:last-of-type {
-            @media(max-width: 1024px) {
-                    display: none;
-                }
-
-            img {
-                position: relative;
-
-                @media(min-width: 1500px) {
-                    bottom: 255px;
-                    right: 270px;
-                }
-                @media(max-width: 1500px) and (min-width:1300px){
-                    transform: scale(0.7);
-                    bottom: 315px;
-                    right: 300px;
-                }
-                @media(max-width: 1300px) {
-                    transform: scale(0.7);
-                    bottom: 315px;
-                    right: 370px;
-                }
-            }
 
             .lead-info {
-                position: absolute;
-                top: 0;
-                right: 0;
+                @media(max-width:1179px) {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 40px;
+                    flex-wrap: wrap;;
+                }
+
 
                 @mixin info-block {
                     background: #191919;
@@ -224,6 +212,10 @@ export default {
 
                 .lead-info-time {
                     @include info-block;
+
+                    @media(max-width:1179px) {
+                        margin-right: 25px;
+                    }
 
                     span {
                         color: #FFE642;

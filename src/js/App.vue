@@ -20,11 +20,11 @@
 <style lang="scss">
 $mainColor: #000000;
 $textColor: #fff;
-$additionColor: #25AB75;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+$additionColor: pink;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 ::selection {
-    background: $additionColor;
+    background: pink;
 }
 
 * {
